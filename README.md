@@ -8,4 +8,9 @@
 
 4. Goroutines work in the same address space they were created in, hence they modify variables - note, on closures, its prudent to pass the variables i.e as 'params' in functions. Example will be in this codebase in a branch called 'one'.  
   
+## WaitGroup  
+1. WaitGroup in the sync package can be thought as a concurrent-safe counter, Add(n) adds by the integer passed and Done() as decreament.  
 
+use `wg.Add()` as close as possible to were it is deployed, or near a loop where the concurrent method is called.  
+
+Example will be in the branch called 'waitgroup'.  
